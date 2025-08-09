@@ -5,7 +5,6 @@ This repo contains a single, end‑to‑end Jupyter notebook that loads Airbnb O
 ## What’s in here
 
 * `airbnb_price_prediction_full_project.ipynb` — the entire workflow in one notebook
-* (Optional outputs the notebook writes)
 
   * `features_X.csv` — cleaned numeric feature matrix
   * `target_y.csv` — cleaned price target
@@ -16,11 +15,25 @@ This repo contains a single, end‑to‑end Jupyter notebook that loads Airbnb O
 * Expected filename and location: place `Airbnb_Open_Data.csv` in the project root (same folder as the notebook).
 * Filepath used by the notebook: `./Airbnb_Open_Data.csv`
 
+  # 1) Install kaggle CLI
+pip install kaggle
+
+# 2) Place your Kaggle API token at: ~/.kaggle/kaggle.json
+#    (Create one at https://www.kaggle.com/settings/account)
+mkdir -p ~/.kaggle
+chmod 600 ~/.kaggle/kaggle.json
+
+# 3) Download and prepare the dataset
+kaggle datasets download -d dgomonov/new-york-city-airbnb-open-data -p .
+unzip -o new-york-city-airbnb-open-data.zip
+mv -f AB_NYC_2019.csv Airbnb_Open_Data.csv
+
+
 ## Quickstart
 
 ```bash
 # 1) Clone
-git clone https://github.com/<your-username>/airbnb-price-prediction.git
+git clone https://github.com/josedaniel-dev/airbnb-price-prediction.git
 cd airbnb-price-prediction
 
 # 2) (Recommended) Create a virtual environment
