@@ -15,11 +15,11 @@ This repo contains a single, end‑to‑end Jupyter notebook that loads Airbnb O
 * Expected filename and location: place `Airbnb_Open_Data.csv` in the project root (same folder as the notebook).
 * Filepath used by the notebook: `./Airbnb_Open_Data.csv`
 
-  # 1) Install kaggle CLI
+## 1) Install kaggle CLI
 pip install kaggle
 
-# 2) Place your Kaggle API token at: ~/.kaggle/kaggle.json
-#    (Create one at https://www.kaggle.com/settings/account)
+## 2) Place your Kaggle API token at: ~/.kaggle/kaggle.json
+##    (Create one at https://www.kaggle.com/settings/account)
 mkdir -p ~/.kaggle
 chmod 600 ~/.kaggle/kaggle.json
 
